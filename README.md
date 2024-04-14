@@ -1,5 +1,6 @@
 # Fyle_Tax_calculator
 Tax calculator web application that allows users to calculate their overall income after tax deductions 
+
 Run the application locally by just following these steps:
 1)Clone the repo
 2)Go to the directory where the project resides
