@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="tax.css">
+    <script src="tax.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <div class="content-center">
+            <div class="form-box">
+                <form id="taxForm">
+                    <div class="form-group">
+                        <label for="grossIncome">
+                            Enter gross annual income:
+                            <span class="hint" title="Gross annual income refers to the total income an individual earns in a year before taxes and deductions.">
+                                <span class="hint-icon">?</span>
+                            </span>
+                        </label>
+                        <input type="text" id="grossIncome" class="form-control" placeholder="Enter gross annual income">
+                        <span class="error-icon" id="grossIncomeError" title="Invalid input!">!</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="extraIncome">Enter extra income:</label>
+                        <input type="text" id="extraIncome" class="form-control" placeholder="Enter extra income">
+                        <span class="error-icon" id="extraIncomeError" title="Invalid input!">!</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="ageGroup">Enter age group:</label>
+                        <select id="ageGroup" class="form-control">
+                            <option value="">Select age group</option>
+                            <option value="below40">&lt; 40</option>
+                            <option value="40to60">&ge; 40 &lt; 60</option>
+                            <option value="above60">&ge; 60</option>
+                        </select>
+                        <span class="error-icon" id="ageGroupError" title="Invalid input!">!</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="deductions">Enter total applicable deductions:</label>
+                        <input type="text" id="deductions" class="form-control" placeholder="Enter deductions">
+                        <span class="error-icon" id="deductionsError" title="Invalid input!">!</span>
+                    </div>
+                    <button type="submit" class="btn-submit">Calculate </button>
+                    <button type="button" id="resetForm" class="btn-submit">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Calculated Results</h2>
+            <div id="output"></div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
